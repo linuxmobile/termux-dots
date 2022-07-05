@@ -1,25 +1,23 @@
 
-
-# ▒▄▀▄░█▒░░█▒▄▀▄░▄▀▀
-# ░█▀█▒█▄▄░█░█▀█▒▄██
-
+# ▄▀▄ █   █ ▄▀▄ ▄▀▀
+# █▀█ █▄▄ █ █▀█ ▄██
 # For full list of aliases: Run 'alias'
 
-# ░▄▀▀░▀▄▀░▄▀▀░▀█▀▒██▀░█▄▒▄█
-# ▒▄██░▒█▒▒▄██░▒█▒░█▄▄░█▒▀▒█
+# ▄▀▀ ▀▄▀ ▄▀▀ ▀█▀ ██▀ █▄ ▄█
+# ▄██  █  ▄██  █  █▄▄ █ ▀ █
 alias c="clear"
 alias q="exit"
 alias sd="cd /sdcard"
 alias pf="cd $PREFIX"
 
-# ▒█▀▄▒▄▀▄░▄▀▀░█▄▀▒▄▀▄░▄▀▒▒██▀
-# ░█▀▒░█▀█░▀▄▄░█▒█░█▀█░▀▄█░█▄▄
+# █▀▄ ▄▀▄ ▄▀▀ █▄▀ ▄▀▄ ▄▀  ██▀
+# █▀  █▀█ ▀▄▄ █ █ █▀█ ▀▄█ █▄▄
 alias pacupg="pkg upgrade"
 alias pacupd="pkg update"
 alias pacupgupd="pkg update && pkg upgrade"
 
-# ░█▀▄░█▒█▀▄▒██▀░▄▀▀░▀█▀░▄▀▄▒█▀▄░▀▄▀
-# ▒█▄▀░█░█▀▄░█▄▄░▀▄▄░▒█▒░▀▄▀░█▀▄░▒█▒
+# █▀▄ █ █▀▄ ██▀ ▄▀▀ ▀█▀ ▄▀▄ █▀▄ ▀▄▀
+# █▄▀ █ █▀▄ █▄▄ ▀▄▄  █  ▀▄▀ █▀▄  █ 
 #Photos
 alias ss="cd /sdcard/Pictures/Screenshots/"
 #Movies
@@ -31,8 +29,8 @@ alias ds="cd /sdcard/Documents"
 #Dev
 alias dev="cd /sdcard/Dev"
 
-# ░▄▀▀░▀▄▀░▄▀▀░▀█▀▒██▀░█▄▒▄█░░░█░█▄░█▒█▀░▄▀▄
-# ▒▄██░▒█▒▒▄██░▒█▒░█▄▄░█▒▀▒█▒░░█░█▒▀█░█▀░▀▄▀
+# ▄▀▀ ▀▄▀ ▄▀▀ ▀█▀ ██▀ █▄ ▄█   █ █▄ █ █▀ ▄▀▄
+# ▄██  █  ▄██  █  █▄▄ █ ▀ █   █ █ ▀█ █▀ ▀▄▀
 alias neo="neofetch"
 alias neodebug="bash ~/.config/neofetch/debug-logo.sh $1"
 alias disk="bash ~/.scripts/system/fetch.sh storage"
@@ -44,8 +42,8 @@ alias lta="exa --icons --tree -lgha"
 alias bat="bat --theme OneHalfDark"
 alias cat="bat --theme OneHalfDark -p $@"
 
-# ░█▄░█▒██▀░▄▀▄░█▒█░█░█▄▒▄█
-# ░█▒▀█░█▄▄░▀▄▀░▀▄▀░█░█▒▀▒█
+# █▄ █ ██▀ ▄▀▄ █ █ █ █▄ ▄█
+# █ ▀█ █▄▄ ▀▄▀ ▀▄▀ █ █ ▀ █
 alias nviminit="nvim ~/.config/nvim/init.lua"
 alias nvimtheme="nvim ~/.config/nvim/lua/chadrc.lua"
 alias nvimplug="nvim ~/.config/nvim/lua/pluginList.lua"
@@ -55,24 +53,24 @@ alias nvimsin="nvim ~/.config/nvim/lua/core/xshin.lua"
 alias nvimhighlight="nvim ~/.config/nvim/lua/hightlights.lua"
 alias nvimcore="nvim ~/.config/nvim/lua/core/init.lua"
 
-# ░▀█▀░▄▀▀░█▄█
-# ░█▄▄▒▄██▒█▒█
+# ▀█▀ ▄▀▀ █▄█
+# █▄▄ ▄██ █ █
 alias zshconf="nvim ~/.zshrc"
 
-# ░█▄░█▒██▀░▄▀▄▒█▀▒██▀░▀█▀░▄▀▀░█▄█
-# ░█▒▀█░█▄▄░▀▄▀░█▀░█▄▄░▒█▒░▀▄▄▒█▒█
+# █▄ █ ██▀ ▄▀▄ █▀ ██▀ ▀█▀ ▄▀▀ █▄█
+# █ ▀█ █▄▄ ▀▄▀ █▀ █▄▄  █  ▀▄▄ █ █
 alias neoconf="nvim ~/.config/neofetch/config.conf"
 alias rxconf="nvim ~/.local/bin/rxfetch"
 alias neoscript="nvim ~/.config/neofetch/script.sh"
 alias fetch="bash ~/.scripts/system/fetch.sh $@"
 alias fetchconf="nvim ~/.scripts/system/fetch.sh"
 
-# ▒▄▀▄░█░░▒█▒██▀░▄▀▀░▄▀▄░█▄▒▄█▒██▀░▄▀▀░█▄█░▄▀▄░▀█▀
-# ░█▀█░▀▄▀▄▀░█▄▄▒▄██░▀▄▀░█▒▀▒█░█▄▄▒▄██▒█▒█░▀▄▀░▒█▒
+# ▄▀▄ █   █ ██▀ ▄▀▀ ▄▀▄ █▄ ▄█ ██▀ ▄▀▀ █▄█ ▄▀▄ ▀█▀
+# █▀█ ▀▄▀▄▀ █▄▄ ▄██ ▀▄▀ █ ▀ █ █▄▄ ▄██ █ █ ▀▄▀  █ 
 alias awesomeconf="nvim ~/.config/awesomeshot/awesomeshot.conf"
 
-# ░▄▀▒░█░▀█▀
-# ░▀▄█░█░▒█▒
+# ▄▀  █ ▀█▀
+# ▀▄█ █  █ 
 alias gitgraph="git log --all --decorate --oneline --graph"
 alias gitupdate="git fetch && git pull"
 alias gitstat="git status"
@@ -80,15 +78,13 @@ alias gitadd="git add $@"
 alias gitcom="git commit -m '$@'"
 alias gitrm="git ls-files --deleted -z | xargs -0 git rm"
 
-# ░▀█▀░▄▀▀░█▄█░░▒█▀▄▒██▀░█▒░░▄▀▄▒▄▀▄░█▀▄
-# ░█▄▄▒▄██▒█▒█▒░░█▀▄░█▄▄▒█▄▄░▀▄▀░█▀█▒█▄▀
+# ▀█▀ ▄▀▀ █▄█   █▀▄ ██▀ █   ▄▀▄ ▄▀▄ █▀▄
+# █▄▄ ▄██ █ █   █▀▄ █▄▄ █▄▄ ▀▄▀ █▀█ █▄▀
 alias refresh="source $HOME/.zshrc"
 
-# ░▀█▀▒██▀▒█▀▄░█▄▒▄█░█▒█░▀▄▀░▒░░▄▀▀▒██▀░▀█▀░▀█▀░█░█▄░█░▄▀▒░▄▀▀
-# ░▒█▒░█▄▄░█▀▄░█▒▀▒█░▀▄█░█▒█░▀▀▒▄██░█▄▄░▒█▒░▒█▒░█░█▒▀█░▀▄█▒▄██
+# ▀█▀ ██▀ █▀▄ █▄ ▄█ █ █ ▀▄▀   ▄▀▀ ██▀ ▀█▀ ▀█▀ █ █▄ █ ▄▀  ▄▀▀
+#  █  █▄▄ █▀▄ █ ▀ █ ▀▄█ █ █   ▄██ █▄▄  █   █  █ █ ▀█ ▀▄█ ▄██
 alias termconf="nvim ~/.termux/termux.properties"
-
-
 
 # Fachafetch
 alias rx="~/.scripts/rxfetch"
