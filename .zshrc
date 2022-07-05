@@ -1,9 +1,6 @@
 #! /bin/zsh
 SHELL=$(which zsh || echo '/bin/zsh')
 
-# GPG tty.
-export GPG_TTY="${TTY:-$(tty)}"
-
 #env
 export VISUAL=nvim;
 export EDITOR=nvim;
@@ -57,7 +54,11 @@ setopt share_history          # share command history data
 source $HOME/.oh-my-zsh/custom/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 source $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOME/.oh-my-zsh/custom/plugins/zsh-completions/zsh-completions.plugin.zsh
-source /usr/share/fzf/key-bindings.zsh
+
+
+source $HOME/.config/lf/icons
+source $HOME/.aliases
+source $HOME/.autostart
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#484E5B,underline"
 
@@ -95,80 +96,6 @@ cd() {
 	builtin cd "$@" && command ls --group-directories-first --color=auto -F
 }
 
-
-###############################
-# ****** ALIAS SECTION ****** #
-###############################
-
-# For full list of aliases: Run 'alias'
-
-PRIV="$(command -v doas || command -v sudo)"
-
-alias c="clear"
-alias q="exit"
-alias trim_all="${PRIV} fstrim -va"
-alias nanosu="${PRIV} nano"
-alias nvimsu="${PRIV} nvim"
-alias cleanram="${PRIV} sh -c 'sync; echo 3 > /proc/sys/vm/drop_caches'"
-
-# Regenerate grub
-alias mkgrub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
-
-# Search and install packages
-alias pacin="pacman -Slq | fzf -m --preview 'cat <(pacman -Si {1}) <(pacman -Fl {1} | awk \"{print \$2}\")' | xargs -ro sudo pacman -S"
-# Search and install packages grom aur
-alias paruin="paru -Slq | fzf -m --preview 'cat <(paru -Si {1}) <(paru -Fl {1} | awk \"{print \$2}\")' | xargs -ro  paru -S"
-# Search and remove packages
-alias pacrem="pacman -Qq | fzf --multi --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns"
-# Search btw installed packages
-alias pac="pacman -Q | fzf"
-# Check aur comments
-alias parucom="paru -Gc"
-# Check aur updates
-alias parupd="paru -Qua"
-#Check pacman updates
-alias pacupd="pacman -Qu"
-# Check pkgbuild
-alias parucheck="paru -Gp"
-# Clean Orphan packages
-alias cleanpac='sudo pacman -Rns $(pacman -Qtdq); paru -c'
-alias psmem="sudo ps_mem | grep -E 'Program|awesome|picom|zsh|alacritty|---'"
-alias git-rm="git ls-files --deleted -z | xargs -0 git rm"
-
-# Fachafetch
-alias rx="~/.scripts/rxfetch"
-
-# neovim {{{
-# alias nvim="lvim" # lunarvim.org
-# alias v="nvim"
-alias v="lvim"
-# compdef v="nvim"
-compdef v="vim"
-# alias vim="nvim"
-alias vim="lvim"
-# compdef vim="nvim"
-compdef lvim="vim"
-# }}}
-
-# Fancy scripts
-alias block="~/.scripts/zsh/cl"
-alias color="~/.scripts/zsh/block ~/.scripts/zsh/blockify_conf"
-alias rain="~/.scripts/zsh/rain"
-alias topcmd="~/.scripts/zsh/tp"
-
-# Exa Settings
-#alias ls="exa -lgh --icons --group-directories-first"
-#alias la="exa -lgha --icons --group-directories-first"
-alias ls="exa --icons --group-directories-first --color=auto"
-alias la="exa -a --icons --group-directories-first --color=auto"
-
-# Color-Toys Aliases
-alias bloks="${HOME}/.color-toys/bloks"
-alias copyhash="${HOME}/.scripts/copyhash.sh"
-alias makemusic="pactl load-module module-remap-sink sink_name=MUSIC"
-alias installed="grep -i installed /var/log/pacman.log
-"
-
 # init starship
 eval "$(starship init zsh)"
 # setup starship custom prompt
@@ -176,7 +103,6 @@ export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 
 # Path to use local/bin
 export PATH="${PATH}:${HOME}/.local/bin"
-export TODO_PATH="$HOME/Documents/todo"
 
 export LANG="en_US.UTF-8"
 export LC_COLLATE="C"
