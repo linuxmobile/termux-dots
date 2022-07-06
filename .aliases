@@ -101,3 +101,13 @@ compdef vim="nvim"
 #alias la="exa -lgha --icons --group-directories-first"
 alias ls="exa --icons --group-directories-first --color=auto"
 alias la="exa -a --icons --group-directories-first --color=auto"
+
+#Change
+alias chcolor="~/.scripts/colorscheme/colors.sh"
+alias chfont="~/.scripts/fonts/fonts.sh"
+alias chzsh="~/.scripts/zsh/changetheme.sh"
+
+#Config
+alias fontused="cat ~/.config/mytermux/fonts/used.log"
+alias colorused="cat ~/.config/mytermux/colorscheme/used.log"
+alias zshused="cat ~/.config/mytermux/zsh/used.log"
